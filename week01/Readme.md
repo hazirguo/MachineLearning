@@ -10,7 +10,7 @@
 
 * Review Questions:
     * I. Introduction （完成时间：2015.1.23；正确率：5/5）
-    * 
+    * II. Linear Regression with One Variable （完成时间：2015.1.23；正确率：5/5）
 
 * Programming Execise:
     * N/A
