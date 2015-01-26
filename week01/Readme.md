@@ -13,7 +13,7 @@
     * II. Linear Regression with One Variable （完成时间：2015.1.23；正确率：5/5）
     * III. Linear Algebra Review （完成时间：2015.1.23；正确率：5/5）
 
-* Programming Execise:
+* Programming Exercises:
     * N/A
 
 
