@@ -1,6 +1,6 @@
-# 第二周
+## 第二周
 
-## 课程内容：
+### 课程内容：
 
 * 带有多个变量的线性回归问题
     * 多重特征值问题的介绍
@@ -11,19 +11,19 @@
     * 多项式回归
     * 正规方程（Normal Equation）
 
-## 视频学习时间：
+### 视频学习时间：
 
 * 2015年1月26日 -- IV.Linear Regression with Multiple Variables
 
 
-## Review Questions:
+### Review Questions:
 
 * IV.Linear Regression with Multiple Variables （完成时间：2015.1.26；正确率：5/5）
 
-## Programming Exercises:
+### Programming Exercises:
 
 
-## 遗留问题：
+### 遗留问题：
 
 - [ ] 多重特征值电梯下降法求导公式的推导
 - [ ] 正规方程求 θ 公式的证明
