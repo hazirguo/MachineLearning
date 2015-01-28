@@ -31,13 +31,18 @@
 %% Clear and Close Figures
 clear ; close all; clc
 
+% fprintf (FID, TEMPLATE, ...) -- 向文件描述 FID 所指向的文件中写入数据，与 C 语言的 fprintf 类似，FID 省略时表示写入 stdout
 fprintf('Loading data ...\n');
 
 %% Load Data
-data = load('ex1data2.txt');
-X = data(:, 1:2);
+data = load('ex1data2.txt'); 
+
+% 可以使用这种方式来取矩阵的一个小子矩阵， : 表示引用该矩阵的整行或整列， m:n 表示引用从第m到第n行/列
+X = data(:, 1:2);    
 y = data(:, 3);
-m = length(y);
+
+% length(A) -- 函数用来求对象A的长度，如果A是向量，则返回的是A的纬度；如果A是矩阵，返回的是A的行和列的最大值
+m = length(y);   
 
 % Print out some data points
 fprintf('First 10 examples from the dataset: \n');
@@ -49,8 +54,12 @@ pause;
 % Scale features and set them to zero mean
 fprintf('Normalizing Features ...\n');
 
+% 函数可以有多个函数值
 [X mu sigma] = featureNormalize(X);
 
+% 矩阵可以由多个矩阵拼接而成， [A B] -- 矩阵B放在A的右边；[A; B] -- 矩阵B放在A的下边
+% ones(X) -- 生成X*X全为1的矩阵； ones(N, M) -- 生成N*M全为1的矩阵
+% 下面这种用法是在原 X 的矩阵的基础上增加第一列，该列的所有值为 1
 % Add intercept term to X
 X = [ones(m, 1) X];
 
@@ -82,13 +91,15 @@ X = [ones(m, 1) X];
 fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
-alpha = 0.01;
-num_iters = 400;
+alpha = 0.01;              %学习速率，可以绘制 #iterators 与 min(J) 的关系图
+num_iters = 400;           %迭代次数
 
+% zeros(X), zero(N, M) -- 与ones()函数功能类似，只不过初始化一个全为零的矩阵
 % Init Theta and Run Gradient Descent 
 theta = zeros(3, 1);
 [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);
 
+% numel(A) -- 返回 A 矩阵元素的个数
 % Plot the convergence graph
 figure;
 plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
@@ -129,6 +140,7 @@ fprintf('Solving with normal equations...\n');
 %               to predict the price of a 1650 sq-ft, 3 br house.
 %
 
+% X = csvread(FILENAME) -- Read the comma-separated-value file FILENAME into the matrix X.
 %% Load Data
 data = csvread('ex1data2.txt');
 X = data(:, 1:2);
