@@ -25,6 +25,7 @@
 ### Review Questions:
 
 * IV.Linear Regression with Multiple Variables （完成时间：2015.1.26；正确率：5/5）
+* V. Octave Tutorial （完成时间：2015.2.11；争取率：5/5）
 
 ### Programming Exercises:
 
